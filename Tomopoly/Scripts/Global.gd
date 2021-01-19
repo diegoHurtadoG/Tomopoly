@@ -3,9 +3,8 @@ extends Node2D
 # Para llamar la nameList desde otro script es solo cosa de poner Global.nameList
 var nameList = []
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+# Esta variable va a almacenar la escena previa
+var prevScene
 
 
 # Called when the node enters the scene tree for the first time.

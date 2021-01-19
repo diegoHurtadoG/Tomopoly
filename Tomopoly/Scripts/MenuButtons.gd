@@ -17,8 +17,7 @@ func _ready():
 
 
 func _on_Start_pressed():
-	# get_tree().change_scene("Path a la scene")
-	pass # Replace with function body.
+	get_tree().change_scene("res://Scenes/playerMenu.tscn")
 
 
 func _on_Credits_pressed():
