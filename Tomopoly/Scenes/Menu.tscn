@@ -26,7 +26,7 @@ font_data = ExtResource( 2 )
 
 [node name="UI" type="Node2D" parent="."]
 
-[node name="Label" type="Label" parent="UI"]
+[node name="Title" type="Label" parent="UI"]
 margin_right = 414.0
 margin_bottom = 160.0
 custom_fonts/font = SubResource( 1 )

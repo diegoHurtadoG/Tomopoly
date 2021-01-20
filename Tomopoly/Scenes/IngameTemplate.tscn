@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/MainTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Fonts/YuseiMagic-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/IngameTemplate.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 2 )
 
 [node name="IngameTemplate" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Template" parent="." instance=ExtResource( 1 )]
 
@@ -49,3 +51,4 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Buttons/GameButtons/Back" to="." method="_on_Back_pressed"]

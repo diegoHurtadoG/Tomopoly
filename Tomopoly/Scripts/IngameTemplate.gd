@@ -1,16 +1,19 @@
 extends Node2D
 
-# Para llamar la nameList desde otro script es solo cosa de poner Global.nameList
-var nameList = []
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
 
-# El path del menu
-var prevScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Back_pressed():
+	get_tree().change_scene(Global.prevScene)

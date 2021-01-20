@@ -16,13 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_Start_pressed():
-	get_tree().change_scene("res://Scenes/InputPlayerMenu.tscn")
-
-
-func _on_Credits_pressed():
-	get_tree().change_scene("res://Scenes/Credits.tscn")
-
-
-func _on_Exit_pressed():
-	get_tree().quit()
+func _on_Play_pressed():
+	Global.prevScene = get_tree().current_scene.filename
+	get_tree().change_scene("res://Scenes/GameModes.tscn")
