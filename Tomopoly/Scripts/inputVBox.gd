@@ -9,6 +9,7 @@ onready var playerInput = get_node("playerInput")
 var playerNumber = 1
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#Aqui poner una condicion sobre si la lista de nombres esta vacia o llena

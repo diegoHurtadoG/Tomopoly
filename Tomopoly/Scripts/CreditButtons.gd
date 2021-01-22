@@ -1,6 +1,8 @@
 extends Node2D
 
+
 #Script de la escena de los creditos, contieene el boton para volver
+
 
 
 # Called when the node enters the scene tree for the first time.

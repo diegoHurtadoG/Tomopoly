@@ -6,14 +6,10 @@ extends Node2D
 # Lo que deberia hacer cada funcion es cambiar el valor de actualGameMode (para poder ocuparla validacion despues)
 #	y cambiar a la escena gamescene (todas)
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Clasico_pressed():

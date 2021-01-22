@@ -4,6 +4,9 @@ extends Node2D
 # En este script solo guardo lo que pasa cuando se apreta play, lo que deberia pasar
 #	es guardar todos los nombres que se escribieron (validando los vacios) en la lista de jugadores
 
+# Declare member variables here. Examples:
+# var a = 2
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

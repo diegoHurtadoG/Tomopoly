@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # En este script mantengo las variable globales, para llamarlo desde otra escena
 #	tengo que hacer Global.blablabla
 
@@ -8,6 +9,7 @@ var nameList = []
 
 # El path del menu
 var prevScene
+
 
 # Almacena el modo de juego que se esta jugando
 var actualGameMode
