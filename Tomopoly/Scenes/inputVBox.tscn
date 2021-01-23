@@ -20,7 +20,7 @@ __meta__ = {
 [node name="addPlayer" type="Button" parent="inputVBox"]
 margin_right = 288.0
 margin_bottom = 20.0
-text = "+"
+text = "Agregar Jugador"
 flat = true
 
 [node name="playerInput" type="LineEdit" parent="inputVBox"]

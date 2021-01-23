@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var label = get_node("Label")
+onready var label = get_node("textoPruebas")
 
 # En este script lo que tiene que pasar es que al apretar siguiente se haga:
 #	Se mapea el actualGameMode con los posibles modos de juego
@@ -17,6 +17,7 @@ func _ready():
 #	pass
 
 
+# Al apretar el boton "Siguiente"
 func _on_Button_pressed():
 	if Global.actualGameMode == Global.gameModes[0]: #Entra si esta en modo clasico
 		# Esta parte deberia ser aleatoria pero esto es para testeo
