@@ -4,6 +4,11 @@ extends Node2D
 # En este script mantengo las variable globales, para llamarlo desde otra escena
 #	tengo que hacer Global.blablabla
 
+# Esta variable guarda la cantidad de jugadores que se TRATAN de agregar,
+#	me sirve para validar que no se traten de agregar mas de 16
+#	Para obtener la cantidad de jugadores real, es el len de nameList
+var playerNumber = 1
+
 # Para llamar la nameList desde otro script es solo cosa de poner Global.nameList
 var nameList = []
 

@@ -17,3 +17,11 @@ func _on_Back_pressed():
 	# Aqui tengo que hacer que en el label ponga la prueba pasada guardad en la lista de global
 	pass
 
+
+
+func _on_SideMenu_pressed():
+	z_index = 1
+
+
+func _on_hideMenu_pressed():
+	z_index = 0

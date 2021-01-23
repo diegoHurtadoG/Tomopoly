@@ -1,22 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Fonts/YuseiMagic-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SideMenu.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=4]
-size = 20
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 20
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
 size = 30
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "PanelMovementIn"
+[sub_resource type="Animation" id=4]
 length = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath("Panel:rect_position")
@@ -28,11 +31,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -384, 0 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( -388, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "PanelMovementOut"
+[sub_resource type="Animation" id=5]
 length = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath("Panel:rect_position")
@@ -44,23 +46,24 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -384, 0 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( -388, 0 ) ]
 }
 
-[node name="Control" type="Control"]
+[node name="sideMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -188.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="PanelContainer" parent="."]
-anchor_right = 0.667
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -384.0
-margin_right = -384.192
-rect_min_size = Vector2( 384, 1024 )
+margin_left = -388.0
+margin_right = -388.0
+rect_min_size = Vector2( 388, 1024 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -68,49 +71,63 @@ __meta__ = {
 [node name="textAndButton" type="VBoxContainer" parent="Panel"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 377.0
+margin_right = 381.0
 margin_bottom = 1017.0
 
 [node name="Names" type="VBoxContainer" parent="Panel/textAndButton"]
-margin_right = 370.0
-margin_bottom = 40.0
+margin_right = 374.0
+margin_bottom = 80.0
+
+[node name="addPlayer" type="Button" parent="Panel/textAndButton/Names"]
+margin_right = 374.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 6 )
+text = "Agregar Jugador"
 
 [node name="nameContainer" type="HBoxContainer" parent="Panel/textAndButton/Names"]
-margin_right = 370.0
-margin_bottom = 40.0
+margin_top = 40.0
+margin_right = 374.0
+margin_bottom = 80.0
 
 [node name="playerName" type="LineEdit" parent="Panel/textAndButton/Names/nameContainer"]
 margin_right = 300.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 300, 0 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 placeholder_text = "Jugador 1"
 
 [node name="deletePlayer" type="Button" parent="Panel/textAndButton/Names/nameContainer"]
 margin_left = 304.0
 margin_right = 328.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 text = "X"
-flat = true
 
-[node name="hideMenu" type="Button" parent="Panel/textAndButton"]
-margin_top = 44.0
-margin_right = 370.0
-margin_bottom = 94.0
-custom_fonts/font = SubResource( 1 )
-text = "Esconder Menu"
-flat = true
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/textAndButton"]
+margin_top = 84.0
+margin_right = 374.0
+margin_bottom = 134.0
 
-[node name="backToMain" type="Button" parent="Panel/textAndButton"]
-margin_top = 98.0
-margin_right = 370.0
-margin_bottom = 148.0
-custom_fonts/font = SubResource( 1 )
-text = "Volver a Menu Principal"
-flat = true
+[node name="backToMain" type="Button" parent="Panel/textAndButton/HBoxContainer"]
+margin_right = 222.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 3 )
+text = "Menu Principal"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/textAndButton/HBoxContainer"]
+margin_left = 226.0
+margin_right = 230.0
+margin_bottom = 50.0
+
+[node name="hideMenu" type="Button" parent="Panel/textAndButton/HBoxContainer"]
+margin_left = 234.0
+margin_right = 334.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 3 )
+text = "Volver"
 
 [node name="movementFromSide" type="AnimationPlayer" parent="."]
-anims/PanelMovementIn = SubResource( 3 )
-anims/PanelMovementOut = SubResource( 2 )
-[connection signal="pressed" from="Panel/textAndButton/hideMenu" to="." method="_on_hideMenu_pressed"]
+anims/PanelMovementIn = SubResource( 4 )
+anims/PanelMovementOut = SubResource( 5 )
+[connection signal="pressed" from="Panel/textAndButton/Names/addPlayer" to="." method="_on_addPlayer_pressed"]
+[connection signal="pressed" from="Panel/textAndButton/HBoxContainer/hideMenu" to="." method="_on_hideMenu_pressed"]

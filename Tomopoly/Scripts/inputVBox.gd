@@ -6,7 +6,6 @@ extends VBoxContainer
 #	se pone dificil lo puedo hacer aqui
 
 onready var playerInput = get_node("playerInput")
-var playerNumber = 1
 
 
 
@@ -20,12 +19,12 @@ func _ready():
 
 
 func _on_addPlayer_pressed():
-	if playerNumber == 16:
+	if Global.playerNumber == 16:
 		#Aqui tirar un mensaje de que ya estan los maximo jugadores
 		return
 	var newLineEdit = LineEdit.new()
-	playerNumber += 1
-	newLineEdit.placeholder_text = "Jugador " + str(playerNumber)
+	Global.playerNumber += 1
+	newLineEdit.placeholder_text = "Jugador " + str(Global.playerNumber)
 	var customFont = playerInput.get_font("font")
 	customFont.size = 20
 	newLineEdit.add_font_override("font", customFont)
