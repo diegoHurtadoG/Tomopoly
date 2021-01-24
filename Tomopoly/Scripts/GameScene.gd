@@ -22,3 +22,7 @@ func _on_Button_pressed():
 	if Global.actualGameMode == Global.gameModes[0]: #Entra si esta en modo clasico
 		# Esta parte deberia ser aleatoria pero esto es para testeo
 		label.text = Global.pruebasClasico[0]
+
+
+func _on_hideMenu_pressed():
+	z_index = 1

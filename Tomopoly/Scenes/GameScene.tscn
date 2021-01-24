@@ -45,6 +45,9 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="IngameTemplate/Control/Panel/textAndButton/VBoxContainer/HBoxContainer/hideMenu" to="." method="_on_hideMenu_pressed"]
 [connection signal="pressed" from="Buttons/Siguiente" to="." method="_on_Button_pressed"]
 
 [editable path="IngameTemplate"]
+
+[editable path="IngameTemplate/Control"]

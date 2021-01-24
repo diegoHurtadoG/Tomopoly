@@ -3,7 +3,7 @@ extends Control
 # Este script me va a servir para controlar el side menu
 
 var menuShown = false
-onready var playerInput = get_node("Panel/textAndButton/Names/nameContainer/playerName")
+onready var playerInput = get_node("Panel/textAndButton/Names/playerName")
 onready var nameBox = get_node("Panel/textAndButton/Names")
 
 
@@ -29,8 +29,6 @@ func _on_addPlayer_pressed():
 	if Global.playerNumber == 16:
 		#Aqui tirar un mensaje de que ya estan los maximo jugadores
 		return
-	var newHBoxContainer = HBoxContainer.new()
-	var newDeleteButton = Button.new()
 	var newLineEdit = LineEdit.new()
 	Global.playerNumber += 1
 	
@@ -40,9 +38,4 @@ func _on_addPlayer_pressed():
 	customFont.size = 20
 	newLineEdit.add_font_override("font", customFont)
 	
-	newDeleteButton.text = "X"
-	newDeleteButton.add_font_override("font", customFont)
-	
-	newHBoxContainer.add_child(newLineEdit)
-	newHBoxContainer.add_child(newDeleteButton)
-	nameBox.add_child(newHBoxContainer)
+	nameBox.add_child(newLineEdit)

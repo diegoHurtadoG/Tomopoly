@@ -3,10 +3,6 @@
 [ext_resource path="res://Fonts/YuseiMagic-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SideMenu.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=6]
-size = 20
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=1]
 size = 20
 font_data = ExtResource( 1 )
@@ -17,6 +13,10 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 14
 font_data = ExtResource( 1 )
 
 [sub_resource type="Animation" id=4]
@@ -81,53 +81,53 @@ margin_bottom = 80.0
 [node name="addPlayer" type="Button" parent="Panel/textAndButton/Names"]
 margin_right = 374.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 1 )
 text = "Agregar Jugador"
 
-[node name="nameContainer" type="HBoxContainer" parent="Panel/textAndButton/Names"]
+[node name="playerName" type="LineEdit" parent="Panel/textAndButton/Names"]
 margin_top = 40.0
 margin_right = 374.0
 margin_bottom = 80.0
-
-[node name="playerName" type="LineEdit" parent="Panel/textAndButton/Names/nameContainer"]
-margin_right = 300.0
-margin_bottom = 40.0
 rect_min_size = Vector2( 300, 0 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 placeholder_text = "Jugador 1"
 
-[node name="deletePlayer" type="Button" parent="Panel/textAndButton/Names/nameContainer"]
-margin_left = 304.0
-margin_right = 328.0
-margin_bottom = 40.0
-custom_fonts/font = SubResource( 2 )
-text = "X"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/textAndButton"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/textAndButton"]
 margin_top = 84.0
 margin_right = 374.0
-margin_bottom = 134.0
+margin_bottom = 160.0
 
-[node name="backToMain" type="Button" parent="Panel/textAndButton/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/textAndButton/VBoxContainer"]
+margin_right = 374.0
+margin_bottom = 50.0
+
+[node name="backToMain" type="Button" parent="Panel/textAndButton/VBoxContainer/HBoxContainer"]
 margin_right = 222.0
 margin_bottom = 50.0
 custom_fonts/font = SubResource( 3 )
 text = "Menu Principal"
 
-[node name="VSeparator" type="VSeparator" parent="Panel/textAndButton/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="Panel/textAndButton/VBoxContainer/HBoxContainer"]
 margin_left = 226.0
 margin_right = 230.0
 margin_bottom = 50.0
 
-[node name="hideMenu" type="Button" parent="Panel/textAndButton/HBoxContainer"]
+[node name="hideMenu" type="Button" parent="Panel/textAndButton/VBoxContainer/HBoxContainer"]
 margin_left = 234.0
 margin_right = 334.0
 margin_bottom = 50.0
 custom_fonts/font = SubResource( 3 )
 text = "Volver"
 
+[node name="Label" type="Label" parent="Panel/textAndButton/VBoxContainer"]
+margin_top = 54.0
+margin_right = 374.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 6 )
+text = "** Para eliminar a un jugador, solo dejalo sin nombre"
+
 [node name="movementFromSide" type="AnimationPlayer" parent="."]
 anims/PanelMovementIn = SubResource( 4 )
 anims/PanelMovementOut = SubResource( 5 )
 [connection signal="pressed" from="Panel/textAndButton/Names/addPlayer" to="." method="_on_addPlayer_pressed"]
-[connection signal="pressed" from="Panel/textAndButton/HBoxContainer/hideMenu" to="." method="_on_hideMenu_pressed"]
+[connection signal="pressed" from="Panel/textAndButton/VBoxContainer/HBoxContainer/hideMenu" to="." method="_on_hideMenu_pressed"]
