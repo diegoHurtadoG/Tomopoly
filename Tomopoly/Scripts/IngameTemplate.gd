@@ -13,7 +13,8 @@ func _ready():
 
 
 func _on_Back_pressed():
-	#get_tree().change_scene(Global.prevScene)
+	# Aqui se puede hacer un try/catch para el problema de que el ultimo back cambia a otra escena
+	get_tree().change_scene(Global.prevScene)
 	# Aqui tengo que hacer que en el label ponga la prueba pasada guardad en la lista de global
 	pass
 
