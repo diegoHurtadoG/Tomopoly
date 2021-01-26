@@ -8,12 +8,23 @@ onready var nameBox = get_node("Panel/textAndButton/Names")
 
 
 func _on_hideMenu_pressed():
+	# Esta parte se encarga del movimiento
 	if (menuShown == false):
 		$movementFromSide.play("PanelMovementIn")
 		menuShown = true
 	else:
 		$movementFromSide.play("PanelMovementOut")
 		menuShown = false
+	
+	# Esta parte maneja la lista de nombres
+	Global.nameList = []
+	var vboxChild = nameBox.get_child_count()
+	for i in range(1, vboxChild):
+		var actualChild = nameBox.get_child(i)
+		if actualChild.text != "":
+			Global.nameList.append(actualChild.text)
+	
+	print(Global.nameList)
 
 
 func _on_SideMenu_pressed():

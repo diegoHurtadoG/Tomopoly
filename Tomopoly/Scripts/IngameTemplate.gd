@@ -5,6 +5,8 @@ extends Node2D
 #	Si estoy jugando, cambio a la prueba anterior segun la lista de pruebas hechas
 #	Si ya estoy en la ultima prueba, podria no hacer nada o ir al menu
 
+var count = 0
+onready var nameContainer = get_node("Control/Panel/textAndButton/Names")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +23,18 @@ func _on_Back_pressed():
 
 
 func _on_SideMenu_pressed():
-	z_index = 1
+	z_index = 1 #Esta parte sirve para que se vea el menu
+	
+	# Aqui abajo es para que los nombres aparezcan en la lista
+	if len(Global.nameList) == 0:
+		pass
+	else:
+		var firstPlayerLE = get_node("Control/Panel/textAndButton/Names/playerName")
+		firstPlayerLE.text = Global.nameList[0]
+		count += 1
+		var customFont = firstPlayerLE.get_font("font")
+		customFont.size = 20
+
 
 
 func _on_hideMenu_pressed():
