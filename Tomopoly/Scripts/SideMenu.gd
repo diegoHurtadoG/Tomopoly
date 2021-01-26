@@ -18,13 +18,14 @@ func _on_hideMenu_pressed():
 	
 	# Esta parte maneja la lista de nombres
 	Global.nameList = []
+	print("3: ", Global.nameList)
 	var vboxChild = nameBox.get_child_count()
 	for i in range(1, vboxChild):
 		var actualChild = nameBox.get_child(i)
 		if actualChild.text != "":
 			Global.nameList.append(actualChild.text)
 	
-	print(Global.nameList)
+	print("4: ", Global.nameList)
 
 
 func _on_SideMenu_pressed():

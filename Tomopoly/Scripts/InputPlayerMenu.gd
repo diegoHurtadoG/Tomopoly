@@ -48,6 +48,8 @@ func _on_Play_pressed():
 		var actualChild = nameContainer.get_child(i)
 		if actualChild.text != "":
 			Global.nameList.append(actualChild.text)
+		else:
+			Global.playerNumber -= 1
 	
 	print(Global.nameList)
 
