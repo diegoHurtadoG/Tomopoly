@@ -25,8 +25,16 @@ var gameModes = ["Clasico", "Detonado", "Grupos", "1v1"]
 # Con esta lista de pruebas se va a jugar
 var pruebasIngame = []
 
-# Pruebas que ya han pasado, escritas segun el indice de la lista de arriba
+# La idea de pruebasPasadas y pruebasPasadasAcumuladas es que pP sea un stack, y cuando aprete volver,
+#	se pushea la prueba que se estaba mostrando en pPA y se popea una de pP para mostrar, si apreto volver denuevo
+#	se vuelve a pushear a pPa y popear de pP.
+# De esta forma cuando aprete siguiente, vamos popeando de pPA hasta que este vacia, y de ahi mostramos nuevas
+
+# Pruebas que ya han pasado
 var pruebasPasadas = []
+
+# Pruebas que ya pasaron pero que cuando fui volviendo quiero que se pongan en el mismo orden 
+var pruebasPasadasAcumuladas = []
 
 # Esta variable es rara de entender pero:
 	# La primera vez que se abre el side menu, hay que cargarle todos los nodos de los nombres a la VBox
