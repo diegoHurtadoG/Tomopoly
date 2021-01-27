@@ -20,12 +20,12 @@ var prevScene
 var actualGameMode
 
 # Modos de juego
-var gameModes = ["Clasico", "..."]
+var gameModes = ["Clasico", "Detonado", "Grupos", "1v1"]
 
-# Pruebas por modo de juego
-var pruebasClasico = ["Prueba1", "Prueba2"]
+# Con esta lista de pruebas se va a jugar
+var pruebasIngame = []
 
-# Pruebas que ya han pasado
+# Pruebas que ya han pasado, escritas segun el indice de la lista de arriba
 var pruebasPasadas = []
 
 # Esta variable es rara de entender pero:
@@ -35,11 +35,17 @@ var pruebasPasadas = []
 	# Solo hay que cargarlos cuando se llega desde el menu principal
 var firstTimeSideMenu = true
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+# Pruebas por modo de juego
+var pruebasClasico = ["PruebaClasica"]
+
+
+var pruebasDetonado = ["PruebaDetonada"]
+
+
+var pruebasGrupos = ["PruebaGrupo"]
+
+
+var pruebas1v1 = ["Prueba1v1"]

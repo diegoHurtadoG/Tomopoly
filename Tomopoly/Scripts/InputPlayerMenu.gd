@@ -50,7 +50,5 @@ func _on_Play_pressed():
 			Global.nameList.append(actualChild.text)
 		else:
 			Global.playerNumber -= 1
-	
-	print(Global.nameList)
 
 

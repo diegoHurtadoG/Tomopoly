@@ -14,4 +14,27 @@ func _ready():
 
 func _on_Clasico_pressed():
 	Global.actualGameMode = Global.gameModes[0]
+	Global.pruebasIngame = [] # Esto lo pongo para que si vuelvo al menu no se acumulen
+	Global.pruebasIngame += Global.pruebasClasico
+	get_tree().change_scene("res://Scenes/GameScene.tscn")
+
+
+func _on_Detonado_pressed():
+	Global.actualGameMode = Global.gameModes[1]
+	Global.pruebasIngame = [] # Esto lo pongo para que si vuelvo al menu no se acumulen
+	Global.pruebasIngame += Global.pruebasDetonado
+	get_tree().change_scene("res://Scenes/GameScene.tscn")
+
+
+func _on_Grupos_pressed():
+	Global.actualGameMode = Global.gameModes[2]
+	Global.pruebasIngame = [] # Esto lo pongo para que si vuelvo al menu no se acumulen
+	Global.pruebasIngame += Global.pruebasGrupos
+	get_tree().change_scene("res://Scenes/GameScene.tscn")
+
+
+func _on_1_v_1_pressed():
+	Global.actualGameMode = Global.gameModes[3]
+	Global.pruebasIngame = [] # Esto lo pongo para que si vuelvo al menu no se acumulen
+	Global.pruebasIngame += Global.pruebas1v1
 	get_tree().change_scene("res://Scenes/GameScene.tscn")

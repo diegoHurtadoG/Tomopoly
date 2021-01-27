@@ -54,6 +54,9 @@ custom_fonts/font = SubResource( 1 )
 text = "1 v 1"
 flat = true
 [connection signal="pressed" from="Modos/Modos/Clasico" to="." method="_on_Clasico_pressed"]
+[connection signal="pressed" from="Modos/Modos/Detonado" to="." method="_on_Detonado_pressed"]
+[connection signal="pressed" from="Modos/Modos/Grupos" to="." method="_on_Grupos_pressed"]
+[connection signal="pressed" from="Modos/Modos/1 v 1" to="." method="_on_1_v_1_pressed"]
 
 [editable path="IngameTemplate"]
 

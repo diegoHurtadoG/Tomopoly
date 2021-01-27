@@ -29,7 +29,6 @@ func _on_SideMenu_pressed():
 	if len(Global.nameList) == 0:
 		pass
 	else:
-		print("1: ", Global.nameList)
 		var firstPlayerLE = get_node("Control/Panel/textAndButton/Names/playerName")
 		firstPlayerLE.text = Global.nameList[0]
 		count += 1
@@ -40,7 +39,6 @@ func _on_SideMenu_pressed():
 				if count == 1:
 					count += 1
 					continue
-				print("2: ", Global.nameList)
 				var addedName = LineEdit.new()
 				addedName.add_font_override("font", customFont)
 				addedName.text = name
