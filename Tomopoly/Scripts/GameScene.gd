@@ -14,6 +14,7 @@ func _ready():
 
 # Al apretar el boton "Siguiente"
 func _on_Button_pressed():
+	Global.pruebasPasadas.append(label.text)
 	label.text = Global.pruebasIngame[0]
 
 
