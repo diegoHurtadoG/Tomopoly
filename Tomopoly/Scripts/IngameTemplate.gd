@@ -16,7 +16,10 @@ func _ready():
 
 func _on_Back_pressed():
 	# Aqui se puede hacer un try/catch para el problema de que el ultimo back cambia a otra escena
-	get_tree().change_scene(Global.prevScene)
+	if get_tree().get_current_scene().get_name() == "gameModes": #Estoy en game modes
+		get_tree().change_scene("res://Scenes/InputPlayerMenu.tscn")
+	else:
+		pass
 	# Aqui tengo que hacer que en el label ponga la prueba pasada guardad en la lista de global
 	pass
 

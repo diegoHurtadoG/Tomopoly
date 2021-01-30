@@ -14,7 +14,7 @@ func _ready():
 	if len(Global.nameList) == 0:
 		pass
 	else:
-		var firstPlayerLE = get_node("inputVBox/inputVBox/playerInput")
+		#var firstPlayerLE = get_node("inputVBox/inputVBox/playerInput")
 		firstPlayerLE.text = Global.nameList[0]
 		count += 1
 		var customFont = firstPlayerLE.get_font("font")
@@ -36,7 +36,6 @@ func _ready():
 
 
 func _on_Play_pressed():
-	Global.prevScene = get_tree().current_scene.filename
 	get_tree().change_scene("res://Scenes/GameModes.tscn")
 	
 	#Aqui abajo tengo que recorrer el VBox de nombres y guardar los nombres en global

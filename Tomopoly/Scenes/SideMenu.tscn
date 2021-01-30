@@ -130,4 +130,5 @@ text = "** Para eliminar a un jugador, solo dejalo sin nombre"
 anims/PanelMovementIn = SubResource( 5 )
 anims/PanelMovementOut = SubResource( 6 )
 [connection signal="pressed" from="Panel/textAndButton/Names/addPlayer" to="." method="_on_addPlayer_pressed"]
+[connection signal="pressed" from="Panel/textAndButton/VBoxContainer/HBoxContainer/backToMain" to="." method="_on_backToMain_pressed"]
 [connection signal="pressed" from="Panel/textAndButton/VBoxContainer/HBoxContainer/hideMenu" to="." method="_on_hideMenu_pressed"]

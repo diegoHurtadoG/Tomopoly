@@ -14,9 +14,21 @@ func _ready():
 
 # Al apretar el boton "Siguiente"
 func _on_Button_pressed():
-	Global.pruebasPasadas.append(label.text)
-	label.text = Global.pruebasIngame[0]
+	if len(Global.pruebasPasadasAcumuladas) == 0: # Si estoy avanzando hacia lo desconocido
+		Global.pruebasPasadas.append(label.text)
+		label.text = Global.pruebasIngame[0]
+	else: # Si estoy avanzando entre las que aprete volver
+		Global.pruebasPasadas.append(label.text)
+		label.text = Global.pruebasPasadasAcumuladas.pop_back()
 
 
 func _on_hideMenu_pressed():
 	z_index = 1
+
+
+func _on_Back_pressed():
+	if len(Global.pruebasPasadas) == 0:
+		get_tree().change_scene("res://Scenes/GameModes.tscn")
+	else:
+		Global.pruebasPasadasAcumuladas.append(label.text)
+		label.text = Global.pruebasPasadas.pop_back()

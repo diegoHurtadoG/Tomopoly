@@ -11,10 +11,6 @@ onready var playerInput = get_node("playerInput")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#Aqui poner una condicion sobre si la lista de nombres esta vacia o llena
-	#	si esta vacia, cargar la escena normal
-	#	si esta no vacia, agregar cajas de texto con cada nombre como si fueran
-	#		los jugadores.
 	pass
 
 

@@ -49,3 +49,7 @@ func _on_addPlayer_pressed():
 	newLineEdit.add_font_override("font", customFont)
 	
 	nameBox.add_child(newLineEdit)
+
+
+func _on_backToMain_pressed():
+	get_tree().change_scene("res://Scenes/Menu.tscn")
