@@ -21,6 +21,7 @@ func _on_Clasico_pressed():
 	Global.pruebasPasadasAcumuladas = []
 	
 	Global.pruebasIngame += Global.pruebasClasico
+	Global.pruebasIngame.shuffle()
 	get_tree().change_scene("res://Scenes/GameScene.tscn")
 
 
@@ -33,6 +34,7 @@ func _on_Detonado_pressed():
 	Global.pruebasPasadasAcumuladas = []
 	
 	Global.pruebasIngame += Global.pruebasDetonado
+	Global.pruebasIngame.shuffle()
 	get_tree().change_scene("res://Scenes/GameScene.tscn")
 
 
@@ -45,6 +47,7 @@ func _on_Grupos_pressed():
 	Global.pruebasPasadasAcumuladas = []
 	
 	Global.pruebasIngame += Global.pruebasGrupos
+	Global.pruebasIngame.shuffle()
 	get_tree().change_scene("res://Scenes/GameScene.tscn")
 
 
@@ -57,4 +60,5 @@ func _on_1_v_1_pressed():
 	Global.pruebasPasadasAcumuladas = []
 	
 	Global.pruebasIngame += Global.pruebas1v1
+	Global.pruebasIngame.shuffle()
 	get_tree().change_scene("res://Scenes/GameScene.tscn")

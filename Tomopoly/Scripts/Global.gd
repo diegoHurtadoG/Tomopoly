@@ -15,6 +15,8 @@ var nameList = []
 # El path del menu
 var prevScene
 
+# El numero de la ronda
+var roundNumber = 0
 
 # Almacena el modo de juego que se esta jugando
 var actualGameMode
@@ -43,11 +45,23 @@ var pruebasPasadasAcumuladas = []
 	# Solo hay que cargarlos cuando se llega desde el menu principal
 var firstTimeSideMenu = true
 
+# Estas de aqui abajo sirven para elegir el nombre
+var rng = RandomNumberGenerator.new()
+func _ready():
+	rng.randomize()
 
+# Dadas dos listas, retorna un elemento de la primera que no este en la segunda
+func chooseName(allNames, usedNames):
+	var index = rng.randi_range(0, len(allNames) - 1)
+	
+	while usedNames.has(allNames[index]):
+		index = rng.randi_range(0, len(allNames) - 1)
+	
+	return allNames[index]
 
 
 # Pruebas por modo de juego
-var pruebasClasico = ["PruebaClasica"]
+var pruebasClasico = ["nombre 1: _, nombre 2: _"]
 
 
 var pruebasDetonado = ["PruebaDetonada"]
