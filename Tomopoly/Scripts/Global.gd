@@ -53,7 +53,8 @@ func _ready():
 # Dadas dos listas, retorna un elemento de la primera que no este en la segunda
 func chooseName(allNames, usedNames):
 	var index = rng.randi_range(0, len(allNames) - 1)
-	
+	if len(usedNames) == len(allNames): # Para que no se haga un loop infinito
+		return allNames[0]
 	while usedNames.has(allNames[index]):
 		index = rng.randi_range(0, len(allNames) - 1)
 	
@@ -61,7 +62,50 @@ func chooseName(allNames, usedNames):
 
 
 # Pruebas por modo de juego
-var pruebasClasico = ["nombre 1: _, nombre 2: _"]
+var pruebasClasico = [
+"Prefieres cortarte un mano o un pie, voten todos juntos, la minoria bebe 2 trago",
+"Hasta el fondo para _",
+"Cultura chupistica pide {tema}, _ empieza",
+"_, lee en voz alta el último mensaje que recibiste",
+"_, como le gustan las mujeres (los hombres) a _, rubias, morenas o coloras",
+"_, cuantas comunas hay en Chile",
+"_, con quién pasarías 1 mes en una isla desierta? Aquella persona deberá regalar 2 tragos",
+"Todo aquel que hable en lenguaje inclusive bebe 3 tragues",
+"{tema de esto o esto}",
+"Toma 2 tragos por cada ramo que hayas reprobado",
+"Todos los que esten usando calcetines negros toman 2",
+"Todos los que usan anteojos toman 2",
+"Todos los que hayan tenido COVID la matan",
+"Todos los que tuvieron un amigo invisible cuando chicos toman 2",
+"Todos los que fueron suspendidos alguna vez en el colegio toman 2",
+"Todos los que hayan repetido la prueba para sacar la licencia de conducir toman 2",
+"_, cuándo fue la última vez que _ apagó tele?",
+"Los que nunca han pololeado regalan 2",
+"Todos los que compitieron alguna vez (en cualquier tipo de competencia) por su colegio regalan 2",
+"Todos los que hayan ganado alguna vez un concurso toman 2",
+"Tomar 1 trago por cada tatuaje que tengas",
+"Regalar 2 tragos las personas con ojos azules",
+"Todas las personas con más de 750 seguidores en Instagram toman 3",
+"Todos los que sigan a Tomopoly en Instagram regalan 3 tragos",
+"Todos los que se hayan lanzado alguna vez en paracaídas regalan 2",
+"Todos los que se hayan lanzado alguna vez en bungee regalan 2",
+"Si alguna vez ahogaste en la piscina a tus Sims toma 3",
+"Todos los que estén jugando sin tomar regalan 2",
+"La última persona que se haya servido un vaso, se toma la mitad de este",
+"La última persona que fue al baño toma 3",
+"Si vives con tus padres toma 2",
+"Si no te duchaste hoy toma 3 sucio de mierda",
+"_, toma 3 tragos",
+"_, regala 2 tragos",
+"_, qué tipo de película prefiere _? 3 tragos en juego",
+"Regala 1 trago por cada mascota que tengas",
+"Si usas reloj toma 2",
+"Juego del 7",
+"El/La dueño/a de casa regala 3",
+"Toda persona con el celular en mano toma 3 (excepto el que lee el juego)",
+"Toma por cada vocal que tenga tu nombre"
+]
+
 
 
 var pruebasDetonado = ["PruebaDetonada"]

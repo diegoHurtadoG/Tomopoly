@@ -59,9 +59,8 @@ __meta__ = {
 }
 
 [node name="Author" type="Label" parent="Text/Content/Content"]
-margin_top = 62.0
 margin_right = 576.0
-margin_bottom = 121.0
+margin_bottom = 59.0
 custom_fonts/font = SubResource( 3 )
 text = "Autor - Diego Hurtado"
 align = 1
@@ -71,9 +70,9 @@ __meta__ = {
 }
 
 [node name="Font" type="Label" parent="Text/Content/Content"]
-margin_top = 125.0
+margin_top = 63.0
 margin_right = 576.0
-margin_bottom = 184.0
+margin_bottom = 122.0
 custom_fonts/font = SubResource( 3 )
 text = "Fuente - Tanukizamurai"
 align = 1
@@ -83,9 +82,9 @@ __meta__ = {
 }
 
 [node name="Logo" type="Label" parent="Text/Content/Content"]
-margin_top = 188.0
+margin_top = 126.0
 margin_right = 576.0
-margin_bottom = 247.0
+margin_bottom = 185.0
 custom_fonts/font = SubResource( 3 )
 text = "Logo - XXX"
 align = 1

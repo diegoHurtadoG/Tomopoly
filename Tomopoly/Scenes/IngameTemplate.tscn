@@ -60,8 +60,8 @@ anchor_bottom = 0.0
 [node name="Panel" parent="Control" index="0"]
 margin_right = 0.0
 margin_bottom = 1024.0
-[connection signal="pressed" from="Buttons/SideMenu/SideMenu" to="Control" method="_on_SideMenu_pressed"]
 [connection signal="pressed" from="Buttons/SideMenu/SideMenu" to="." method="_on_SideMenu_pressed"]
+[connection signal="pressed" from="Buttons/SideMenu/SideMenu" to="Control" method="_on_SideMenu_pressed"]
 [connection signal="pressed" from="Buttons/GameButtons/Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="Control/Panel/textAndButton/VBoxContainer/HBoxContainer/hideMenu" to="." method="_on_hideMenu_pressed"]
 

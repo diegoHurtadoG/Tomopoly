@@ -8,7 +8,6 @@ extends VBoxContainer
 onready var playerInput = get_node("playerInput")
 
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -24,5 +23,4 @@ func _on_addPlayer_pressed():
 	var customFont = playerInput.get_font("font")
 	customFont.size = 20
 	newLineEdit.add_font_override("font", customFont)
-	#newLineEdit.align = LineEdit.ALIGN_CENTER #Aqui hay un problema de que no alinea al centro centro
 	add_child(newLineEdit)

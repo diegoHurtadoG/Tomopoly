@@ -23,7 +23,6 @@ func _on_hideMenu_pressed():
 		var actualChild = nameBox.get_child(i)
 		if actualChild.text != "":
 			Global.nameList.append(actualChild.text)
-	
 
 
 func _on_SideMenu_pressed():

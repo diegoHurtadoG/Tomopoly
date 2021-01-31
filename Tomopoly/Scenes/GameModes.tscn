@@ -13,6 +13,9 @@ script = ExtResource( 3 )
 
 [node name="IngameTemplate" parent="." instance=ExtResource( 1 )]
 
+[node name="Next" parent="IngameTemplate/Buttons/GameButtons" index="1"]
+visible = false
+
 [node name="Modos" type="Node2D" parent="."]
 
 [node name="Modos" type="VBoxContainer" parent="Modos"]
