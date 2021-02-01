@@ -32,6 +32,16 @@ func _on_Button_pressed():
 			parsedText[rePlace] = testName
 			usedNames.append(testName)
 		
+		while parsedText.count("{tema}") != 0:
+			rePlace = parsedText.find("{tema}")
+			parsedText.erase(rePlace + 1, 5)
+			parsedText[rePlace] = Global.temasCulturaChupistica.pop_back()
+		
+		while parsedText.count("{eleccion}") != 0:
+			rePlace = parsedText.find("{eleccion}")
+			parsedText.erase(rePlace + 1, 9)
+			parsedText[rePlace] = Global.eleccion.pop_back()
+		
 		#TODO Agregar igual que arriba el reemplazo de categorias de cultura chupistica, nombres de equipo y todo
 		
 		usedNames = []
