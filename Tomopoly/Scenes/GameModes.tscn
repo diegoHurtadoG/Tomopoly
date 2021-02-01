@@ -13,6 +13,9 @@ script = ExtResource( 3 )
 
 [node name="IngameTemplate" parent="." instance=ExtResource( 1 )]
 
+[node name="SideMenu" parent="IngameTemplate/Buttons/SideMenu" index="0"]
+visible = false
+
 [node name="Next" parent="IngameTemplate/Buttons/GameButtons" index="1"]
 visible = false
 

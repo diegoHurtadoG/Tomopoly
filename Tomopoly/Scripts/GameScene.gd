@@ -47,6 +47,7 @@ func _on_hideMenu_pressed():
 
 func _on_Back_pressed():
 	if len(Global.pruebasPasadas) == 0:
+		Global.firstTimeSideMenu = true
 		get_tree().change_scene("res://Scenes/GameModes.tscn")
 	else:
 		Global.pruebasPasadasAcumuladas.append(label.text)
