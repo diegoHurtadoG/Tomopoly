@@ -15,7 +15,7 @@ func _ready():
 	if len(Global.nameList) == 0:
 		pass
 	else:
-		var firstPlayerLE = get_node("inputVBox/inputVBox/playerInput")
+		#var firstPlayerLE = get_node("inputVBox/inputVBox/playerInput")
 		firstPlayerLE.text = Global.nameList[0]
 		count += 1
 		var customFont = firstPlayerLE.get_font("font")

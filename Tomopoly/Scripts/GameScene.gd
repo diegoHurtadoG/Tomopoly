@@ -32,6 +32,8 @@ func _on_Button_pressed():
 			parsedText[rePlace] = testName
 			usedNames.append(testName)
 		
+		#TODO Agregar igual que arriba el reemplazo de categorias de cultura chupistica, nombres de equipo y todo
+		
 		usedNames = []
 		Global.roundNumber += 1
 		label.text = parsedText
