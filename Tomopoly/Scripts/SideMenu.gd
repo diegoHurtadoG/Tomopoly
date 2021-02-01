@@ -51,4 +51,5 @@ func _on_addPlayer_pressed():
 
 
 func _on_backToMain_pressed():
+	Global.firstTimeSideMenu = true
 	get_tree().change_scene("res://Scenes/Menu.tscn")
