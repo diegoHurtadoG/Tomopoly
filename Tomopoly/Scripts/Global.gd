@@ -1,5 +1,7 @@
 extends Node2D
 
+func _ready():
+	randomize()
 
 # En este script mantengo las variable globales, para llamarlo desde otra escena
 #	tengo que hacer Global.blablabla
@@ -47,8 +49,6 @@ var firstTimeSideMenu = true
 
 # Estas de aqui abajo sirven para elegir el nombre
 var rng = RandomNumberGenerator.new()
-func _ready():
-	rng.randomize()
 
 # Dadas dos listas, retorna un elemento de la primera que no este en la segunda
 func chooseName(allNames, usedNames):
@@ -60,6 +60,23 @@ func chooseName(allNames, usedNames):
 	
 	return allNames[index]
 
+# Dada una lista de pruebas, le suma tragos a cada numero que aparezca
+func addSips(lista):
+	var listaAux = []
+	for element in lista:
+		for i in element:
+			if isDigit(i):
+				var pos = element.find(i)
+				element[pos] = str(int(i) + 3)
+		listaAux.append(element)
+	return listaAux
+
+# Dado un char, verifica que este sea un digito
+var digitList = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+func isDigit(param):
+	if param in digitList:
+		return true
+	return false
 
 # Pruebas por modo de juego
 var pruebasClasico = [
@@ -154,12 +171,28 @@ var pruebasClasico = [
 "_ toma 2 tragos sin las manos, si lo logras, la persona a tu derecha toma 4",
 "_ con que jugador te quedarias en una isla desierta? Si no quieres responder bebe 3",
 "Todos los que tengan tinder beben 3, y de pasada hablenle a algun match",
-"Si no han pasado las 20:00, todos toman 3"
+"Si no han pasado las 20:00, todos toman 3",
+"_ en cualquier momento del juego puedes gritar BOMBA, el ultimo jugador en tirarse al suelo bebe 3"
 ]
 
 
 
-var pruebasDetonado = ["PruebaDetonada"]
+var pruebasDetonado = [
+"_ deberá hacer un cara pálida de mínimo 3 segundos" ,
+"_ deberá chuparle el nipple (pezón) a la persona que _ elija",
+"_ deberá hacer un chilly willy con una tapa de pisco",
+"El jugador con el vaso más lleno deberá tomarse la mitad de este",
+"_ deberá chuparle la oreja por 3 seg a _",
+"Todos terminan el vaso",
+"_ recita el abecedario al revez, toma 3 por cada error que cometas",
+"Elegir entre todos a la persona más loca, este debe hacer un trompetazo de 4 segundos en posición invertida",
+"_, tapita",
+"Todos toman tapita",
+"_ sirvele un vaso a _, pero primero lo tiene que terminar",
+"_, chilly willy",
+"_, haz un snorkel",
+"_, termina el vaso"
+]
 
 
 var pruebasGrupos = ["PruebaGrupo"]

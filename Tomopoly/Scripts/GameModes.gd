@@ -9,7 +9,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 func _on_Clasico_pressed():
@@ -38,6 +38,7 @@ func _on_Detonado_pressed():
 	Global.eleccion.shuffle()
 	
 	Global.pruebasIngame += Global.pruebasDetonado
+	Global.pruebasIngame += Global.addSips(Global.pruebasClasico)
 	Global.pruebasIngame.shuffle()
 	get_tree().change_scene("res://Scenes/GameScene.tscn")
 
