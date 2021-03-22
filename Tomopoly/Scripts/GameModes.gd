@@ -13,6 +13,7 @@ func _ready():
 
 
 func _on_Clasico_pressed():
+	randomize()
 	Global.actualGameMode = Global.gameModes[0]
 	
 	# Esto lo pongo para que si vuelvo al menu no se acumulen
@@ -28,6 +29,7 @@ func _on_Clasico_pressed():
 
 
 func _on_Detonado_pressed():
+	randomize()
 	Global.actualGameMode = Global.gameModes[1]
 	
 	# Esto lo pongo para que si vuelvo al menu no se acumulen
@@ -44,6 +46,7 @@ func _on_Detonado_pressed():
 
 
 func _on_Grupos_pressed():
+	randomize()
 	Global.actualGameMode = Global.gameModes[2]
 	
 	# Esto lo pongo para que si vuelvo al menu no se acumulen
@@ -59,6 +62,7 @@ func _on_Grupos_pressed():
 
 
 func _on_1_v_1_pressed():
+	randomize()
 	Global.actualGameMode = Global.gameModes[3]
 	
 	# Esto lo pongo para que si vuelvo al menu no se acumulen

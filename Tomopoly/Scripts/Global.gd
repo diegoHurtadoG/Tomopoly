@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	randomize()
+	pass
 
 # En este script mantengo las variable globales, para llamarlo desde otra escena
 #	tengo que hacer Global.blablabla
