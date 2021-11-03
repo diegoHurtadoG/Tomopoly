@@ -33,4 +33,5 @@ margin_right = 384.0
 margin_bottom = 74.0
 custom_fonts/font = SubResource( 2 )
 placeholder_text = "Jugador 1"
+
 [connection signal="pressed" from="inputVBox/addPlayer" to="inputVBox" method="_on_addPlayer_pressed"]

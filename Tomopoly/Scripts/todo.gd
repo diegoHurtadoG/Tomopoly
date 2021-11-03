@@ -1,8 +1,6 @@
 # Esenciales: 
 # TODO Hacer el mecanismo de juego en equipo, quiza agregarle cantidad variable de equipos y que
 #	cada uno los pueda hacer
-# TODO Casos borde por ejemplo cuando no hay jugadores o hay solo 1
-
 
 # Bonus:
 # TODO Easter egg
@@ -12,3 +10,5 @@
 
 # Detalles, no necesarios:
 # TODO Caso borde de limite de jugadas
+
+# Buscar TODOs en el codigo (con herramienta de buscar) porque algunos estanen lugares especificos.

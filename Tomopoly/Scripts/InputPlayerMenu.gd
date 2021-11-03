@@ -31,13 +31,8 @@ func _ready():
 			nameContainer.add_child(addedName)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://Scenes/GameModes.tscn")
 	
 	#Aqui abajo tengo que recorrer el VBox de nombres y guardar los nombres en global
 	#	vboxChild es un int que guarda la cantidad de hijos de la caja, el hijo 0 es el boton de agregar
@@ -50,4 +45,10 @@ func _on_Play_pressed():
 			Global.nameList.append(actualChild.text)
 		else:
 			Global.playerNumber -= 1
+	
+	# If there are 2 or more names, change scene, if not, restore player number
+	if Global.nameList.size() > 1:
+		get_tree().change_scene("res://Scenes/GameModes.tscn")
+	else:
+		Global.playerNumber = vboxChild - 1
 
